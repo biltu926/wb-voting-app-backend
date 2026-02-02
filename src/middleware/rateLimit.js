@@ -1,4 +1,6 @@
 const MongoStore = require('rate-limit-mongo');
+const rateLimit = require('express-rate-limit');
+const { softHash } = require('../utils/commonUtils');
 
 exports.initLimiter = rateLimit({
     windowMs: 60 * 1000, // 1 minute
